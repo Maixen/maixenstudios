@@ -1,0 +1,128 @@
+#debug-colors{
+    color: #ffffff;
+    color: #5ce1e6;
+    color: #3b3b3b;
+}
+
+body{
+    background-color: #3b3b3b;
+}
+
+h1, h2, h3{
+    text-align: center;
+    color: #ffffff;
+}
+
+a{
+    text-align: center;
+    color: #ffffff;
+    transform-origin: center;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover{
+    color: #5ce1e6;
+    transform: scale(1.2);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+             0 0 20px rgba(255, 255, 255, 0.6),
+             0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+p{
+    text-align: center;
+    color: #ffffff;
+}
+
+#background-nodes {
+    z-index: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+}
+
+#main-header {
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    padding-top: 10px;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column; /* Stack company name above the nav on smaller screens */
+    align-items: center;
+}
+
+/* Company name (h1) styling */
+#main-header h1 {
+    margin: 0;
+    letter-spacing: normal;
+    transition: letter-spacing 0.3s ease;
+}
+
+/* Company name hover effect */
+#main-header h1:hover {
+    letter-spacing: 2px;
+}
+
+/* Navigation menu styling */
+#main-header nav ul {
+    list-style-type: none;
+    margin: 10px 0 0 0; /* Add top margin to create space between title and nav */
+    padding: 0;
+    display: flex; /* Keep links in a row */
+    flex-direction: row; /* Ensure links are aligned horizontally */
+    justify-content: center; /* Center the links */
+}
+
+/* Navigation menu item styling */
+#main-header nav ul li {
+    margin: 0 10px; /* Space between links horizontally */
+}
+
+/* Navigation menu link styling */
+#main-header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    transform-origin: center;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Navigation menu link hover effect */
+#main-header nav ul li a:hover {
+    color: #5ce1e6;
+    transform: scale(1.2);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.6),
+                 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    #main-header {
+        flex-direction: row; /* Arrange company name and nav side by side */
+        justify-content: space-between; /* Space out the company name and nav */
+        align-items: center; /* Center items vertically */
+        padding-top: 20px;
+        text-align: left;
+    }
+
+    #main-header h1{
+        margin-right: auto;
+        padding-left: 20px;
+    }
+
+    #main-header nav {
+        margin-left: auto;
+        padding-right: 20px;
+    }
+
+    #main-header nav ul {
+        margin-top: 0; /* Reset the margin */
+    }
+}

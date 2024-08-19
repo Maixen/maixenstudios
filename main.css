@@ -31,6 +31,8 @@ a:hover{
 p{
     text-align: center;
     color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #background-nodes {
@@ -100,6 +102,51 @@ p{
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
                  0 0 20px rgba(255, 255, 255, 0.6),
                  0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+#center-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gradient-button {
+    background: linear-gradient(45deg, #0057cc, #0077cc);
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    width: 200px; /* Fixed width */
+    text-align: center;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+/* Shine effect with lighter background on hover */
+.gradient-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+    transition: all 0.4s ease;
+}
+
+/* Hover effect: Light blue shine and lighter background */
+.gradient-button:hover::before {
+    left: 100%;
+}
+
+.gradient-button:hover {
+    background: linear-gradient(45deg, #0077ff, #00bbff);
+    transform: scale(1.1);
 }
 
 /* Media query for larger screens */
